@@ -1,21 +1,11 @@
-
-You are a 2026 Phoenix WebDesign Beast:
-
-Fair. The last version had try-hard gimmicks (custom cursor/tilt/progress bar). That’s not “luxury,” it’s “template flex.”
-
-Here’s a clean, premium, brutally simple v3: no circus, just typography, spacing, and a proof-driven structure that sells verification without fake promises.
-
-If what you’re seeing is “unstyled HTML,” that’s not design—your CSS path isn’t loading. Quick check: your repo must contain assets/styles.css and your HTML must link href="assets/styles.css" exactly.
-Replace your files with these (same file tree)
-index.html
-
+<!-- index.html -->
 <!doctype html>
-<html lang="en">
+<html lang="en" class="obsidian">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Authorized AI assurance: semantic and logical adversarial evaluation with evidence-linked findings and verification criteria. No false guarantees." />
-  <meta name="theme-color" content="#07080b" />
+  <meta name="theme-color" content="#000000" />
 
   <title>Veriable — AI Systems Assurance</title>
 
@@ -24,146 +14,128 @@ index.html
 </head>
 
 <body>
+  <div class="noise" aria-hidden="true"></div>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="top" data-glass>
-    <div class="wrap top__inner">
+  <header class="sys-header">
+    <div class="sys-header__grid">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">
-          <span class="brand__name">Veriable</span>
-          <span class="brand__tag">AI Systems Assurance</span>
-        </span>
+        <svg class="brand__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 2L12 22L22 2H16L12 11L8 2H2Z" fill="currentColor"/></svg>
+        <span class="brand__id">VERIABLE<span class="sys-dim">.SYS</span></span>
       </a>
 
-      <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span>
-      </button>
-
-      <nav id="nav" class="nav" aria-label="Primary">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#process">Process</a>
-        <a href="#deliverables">Deliverables</a>
-        <a href="#boundaries">Boundaries</a>
-        <a class="btn btn--ghost" href="#contact">Scope it</a>
+      <nav id="nav" class="sys-nav" aria-label="Primary">
+        <a href="#capabilities" data-text="Capabilities">Capabilities</a>
+        <a href="#process" data-text="Process">Process</a>
+        <a href="#deliverables" data-text="Deliverables">Deliverables</a>
+        <a href="#boundaries" data-text="Boundaries">Boundaries</a>
       </nav>
 
-      <a class="btn btn--solid top__cta" href="#contact">Request assessment</a>
+      <div class="sys-header__action">
+        <a class="btn-primary" href="#contact">
+          <span class="btn-text">INITIALIZE SCOPE</span>
+        </a>
+        <button class="sys-menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="line"></span><span class="line"></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section id="top" class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <div class="badges" role="list">
-            <span class="badge" role="listitem">Authorized only</span>
-            <span class="badge badge--dim" role="listitem">Responsible disclosure</span>
-            <span class="badge badge--dim" role="listitem">No false claims</span>
+    <section id="top" class="hero section-bleed">
+      <div class="grid-12">
+        <div class="hero__content span-8">
+          <div class="sys-meta reveal">
+            <span class="sys-tag">AUTHORIZED ONLY</span>
+            <span class="sys-tag sys-dim">RESPONSIBLE DISCLOSURE</span>
+            <span class="sys-tag sys-dim">NO FALSE CLAIMS</span>
           </div>
 
-          <h1 class="h1">
-            Verify AI systems
-            <span class="h1__accent">before they fail</span>.
+          <h1 class="headline reveal d-delay-1">
+            Verify AI systems<br>
+            <span class="headline__accent">before they fail.</span>
           </h1>
 
-          <p class="sub">
-            I test AI behavior at the semantic and logical level—where “built-in safety” often collapses under real prompts,
-            real tools, and real workflows. You get evidence, prioritized mitigations, and verification criteria you can audit.
+          <p class="lede reveal d-delay-2">
+            I test AI behavior at the semantic and logical level—where “built-in safety” often collapses under real prompts, real tools, and real workflows. You get evidence, prioritized mitigations, and verification criteria you can audit.
           </p>
 
-          <div class="actions">
-            <a class="btn btn--solid" href="#contact">Request a scoped assessment</a>
-            <a class="btn btn--ghost" href="#deliverables">See deliverables</a>
+          <div class="hero__actions reveal d-delay-3">
+            <a class="btn-solid" href="#contact">REQUEST SCOPED ASSESSMENT</a>
+            <a class="btn-ghost" href="#deliverables">SEE DELIVERABLES</a>
           </div>
 
-          <div class="line" data-glass>
-            <div class="line__k">Operating standard</div>
-            <div class="line__v">
-              Verifiable — not vulnerable • Functional — not fragile • Reliable + resilient — not reactive and reckless
-            </div>
+          <div class="sys-spec-line reveal d-delay-4">
+            <span class="spec-k">OP_STD //</span>
+            <span class="spec-v">Verifiable — not vulnerable • Functional — not fragile • Reliable + resilient — not reactive</span>
           </div>
         </div>
 
-        <aside class="hero__panel" data-glass>
-          <div class="panel__head">
-            <div class="panel__title">Engagement snapshot</div>
-            <div class="pill">Evidence-linked</div>
+        <aside class="hero__panel span-4 reveal d-delay-5">
+          <div class="panel__header">
+            <span class="panel__id">ENGAGEMENT_SNAPSHOT</span>
+            <span class="sys-indicator"></span>
           </div>
-
-          <div class="panel__rows">
-            <div class="row">
-              <div class="row__k">Focus</div>
-              <div class="row__v">High-risk failure modes</div>
-            </div>
-            <div class="row">
-              <div class="row__k">Surfaces</div>
-              <div class="row__v">Prompts • Tools/Agents • RAG • Policies</div>
-            </div>
-            <div class="row">
-              <div class="row__k">Outputs</div>
-              <div class="row__v">Risk register • Mitigation backlog • Verification criteria</div>
-            </div>
-            <div class="row">
-              <div class="row__k">Rule</div>
-              <div class="row__v">No unauthorized testing. No misuse guidance. No guarantees.</div>
-            </div>
+          <div class="panel__data">
+            <div class="data-row"><span class="data-k">FOCUS</span><span class="data-v">High-risk failure modes</span></div>
+            <div class="data-row"><span class="data-k">SURFACES</span><span class="data-v">Prompts • Tools/Agents • RAG</span></div>
+            <div class="data-row"><span class="data-k">OUTPUTS</span><span class="data-v">Risk register • Mitigations • Verification</span></div>
+            <div class="data-row data-alert"><span class="data-k">RULE</span><span class="data-v">No unauthorized testing. No misuse guidance. No guarantees.</span></div>
           </div>
-
-          <div class="panel__foot">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Designed for teams who can’t afford fragile AI.</span>
+          <div class="panel__footer">
+            Designed for teams who can’t afford fragile AI.
           </div>
         </aside>
       </div>
     </section>
 
     <section id="capabilities" class="section">
-      <div class="wrap">
-        <header class="head">
-          <h2>Capabilities</h2>
-          <p>
-            Not “AI safety consulting.” You’re buying pressure testing + proof.
-            Everything maps to deliverables you can inspect.
-          </p>
+      <div class="grid-12">
+        <header class="section-head span-12 reveal">
+          <h2 class="subhead">01 // CAPABILITIES</h2>
+          <p class="head-desc">Not “AI safety consulting.” You’re buying pressure testing + proof. Everything maps to deliverables you can inspect.</p>
         </header>
 
-        <div class="cards">
-          <article class="card" data-glass>
+        <div class="matrix span-12">
+          <article class="matrix-cell reveal">
+            <div class="cell-id">CAP_01</div>
             <h3>Authorized adversarial evaluation</h3>
             <p>Stress testing behavior under ambiguity, hierarchy conflict, and policy collision.</p>
-            <ul>
+            <ul class="sys-list">
               <li>Instruction/role confusion mapping</li>
               <li>Misuse-case modeling for real workflows</li>
               <li>Boundary enforcement validation</li>
             </ul>
           </article>
 
-          <article class="card" data-glass>
+          <article class="matrix-cell reveal">
+            <div class="cell-id">CAP_02</div>
             <h3>Tool & agent boundary review</h3>
             <p>Language-to-action means permissions, validation, and blast-radius control.</p>
-            <ul>
+            <ul class="sys-list">
               <li>Least-privilege permissioning review</li>
               <li>Unsafe action path discovery</li>
               <li>Safe degradation behavior design</li>
             </ul>
           </article>
 
-          <article class="card" data-glass>
+          <article class="matrix-cell reveal">
+            <div class="cell-id">CAP_03</div>
             <h3>Retrieval trust (RAG)</h3>
             <p>Retrieval can inject wrong context or cross boundaries. I test trust logic.</p>
-            <ul>
+            <ul class="sys-list">
               <li>Isolation and provenance checks</li>
               <li>Relevance failure conditions</li>
               <li>Reliability constraints & mitigations</li>
             </ul>
           </article>
 
-          <article class="card" data-glass>
+          <article class="matrix-cell reveal">
+            <div class="cell-id">CAP_04</div>
             <h3>Verification criteria</h3>
             <p>So fixes stay fixed across model updates, prompt edits, and new tools.</p>
-            <ul>
+            <ul class="sys-list">
               <li>“Never event” acceptance criteria</li>
               <li>Regression scenario set</li>
               <li>Monitoring signals & incident posture</li>
@@ -173,1209 +145,174 @@ index.html
       </div>
     </section>
 
-    <section id="process" class="section section--alt">
-      <div class="wrap">
-        <header class="head">
-          <h2>Process</h2>
-          <p>Clean path from discovery → mitigation → verification.</p>
+    <section id="process" class="section section-border">
+      <div class="grid-12">
+        <header class="section-head span-4 reveal">
+          <h2 class="subhead">02 // PROCESS</h2>
+          <p class="head-desc">Clean path from discovery → mitigation → verification.</p>
         </header>
 
-        <ol class="steps" data-glass>
-          <li class="step">
-            <span class="step__n">01</span>
-            <div class="step__b">
-              <div class="step__t">Scope & “never events”</div>
-              <div class="step__d">Define boundaries, permissions, data sources, unacceptable outcomes.</div>
+        <div class="sequence span-8">
+          <div class="seq-step reveal">
+            <div class="seq-num">01</div>
+            <div class="seq-body">
+              <h4 class="seq-title">Scope & “never events”</h4>
+              <p class="seq-desc">Define boundaries, permissions, data sources, unacceptable outcomes.</p>
             </div>
-          </li>
-          <li class="step">
-            <span class="step__n">02</span>
-            <div class="step__b">
-              <div class="step__t">Semantic + logical probing</div>
-              <div class="step__d">Stress instruction hierarchies, tool paths, retrieval quirks, policy enforcement.</div>
+          </div>
+          <div class="seq-step reveal">
+            <div class="seq-num">02</div>
+            <div class="seq-body">
+              <h4 class="seq-title">Semantic + logical probing</h4>
+              <p class="seq-desc">Stress instruction hierarchies, tool paths, retrieval quirks, policy enforcement.</p>
             </div>
-          </li>
-          <li class="step">
-            <span class="step__n">03</span>
-            <div class="step__b">
-              <div class="step__t">Mitigation design</div>
-              <div class="step__d">Prioritize controls that reduce blast radius and increase verifiability.</div>
+          </div>
+          <div class="seq-step reveal">
+            <div class="seq-num">03</div>
+            <div class="seq-body">
+              <h4 class="seq-title">Mitigation design</h4>
+              <p class="seq-desc">Prioritize controls that reduce blast radius and increase verifiability.</p>
             </div>
-          </li>
-          <li class="step">
-            <span class="step__n">04</span>
-            <div class="step__b">
-              <div class="step__t">Verification plan</div>
-              <div class="step__d">Acceptance criteria + regression scenarios for the behaviors that matter.</div>
+          </div>
+          <div class="seq-step reveal">
+            <div class="seq-num">04</div>
+            <div class="seq-body">
+              <h4 class="seq-title">Verification plan</h4>
+              <p class="seq-desc">Acceptance criteria + regression scenarios for the behaviors that matter.</p>
             </div>
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="deliverables" class="section">
-      <div class="wrap">
-        <header class="head">
-          <h2>Deliverables</h2>
-          <p>No vibes. Files you can hand to engineering and leadership.</p>
+      <div class="grid-12">
+        <header class="section-head span-4 reveal">
+          <h2 class="subhead">03 // DELIVERABLES</h2>
+          <p class="head-desc">No vibes. Files you can hand to engineering and leadership.</p>
         </header>
 
-        <div class="dl" data-glass>
-          <div class="dl__item">
-            <div class="dl__k">Risk register (evidence-linked)</div>
-            <div class="dl__v">Reproduction guidance, impacted surfaces, severity rationale, mitigation options.</div>
+        <div class="data-ledger span-8">
+          <div class="ledger-row reveal">
+            <div class="ledger-k">Risk register <span class="sys-tag">EVIDENCE-LINKED</span></div>
+            <div class="ledger-v">Reproduction guidance, impacted surfaces, severity rationale, mitigation options.</div>
           </div>
-          <div class="dl__item">
-            <div class="dl__k">Mitigation backlog</div>
-            <div class="dl__v">Ordered by business impact + feasibility: boundaries, validation, permissions, workflow constraints.</div>
+          <div class="ledger-row reveal">
+            <div class="ledger-k">Mitigation backlog</div>
+            <div class="ledger-v">Ordered by business impact + feasibility: boundaries, validation, permissions, workflow constraints.</div>
           </div>
-          <div class="dl__item">
-            <div class="dl__k">Verification criteria</div>
-            <div class="dl__v">Acceptance criteria + regression scenarios for critical behaviors (“never events”).</div>
+          <div class="ledger-row reveal">
+            <div class="ledger-k">Verification criteria</div>
+            <div class="ledger-v">Acceptance criteria + regression scenarios for critical behaviors (“never events”).</div>
           </div>
-          <div class="dl__item">
-            <div class="dl__k">Executive brief</div>
-            <div class="dl__v">Clear summary: risks, priorities, decisions, and what changes after mitigation.</div>
+          <div class="ledger-row reveal">
+            <div class="ledger-k">Executive brief</div>
+            <div class="ledger-v">Clear summary: risks, priorities, decisions, and what changes after mitigation.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="boundaries" class="section section--alt">
-      <div class="wrap">
-        <header class="head">
-          <h2>Boundaries</h2>
-          <p>How I keep this ethical and professional.</p>
+    <section id="boundaries" class="section section-border">
+      <div class="grid-12">
+        <header class="section-head span-12 reveal">
+          <h2 class="subhead">04 // BOUNDARIES</h2>
+          <p class="head-desc">How I keep this ethical and professional.</p>
         </header>
 
-        <div class="bounds" data-glass>
-          <div class="bounds__row">
-            <div class="bounds__k">Authorization required</div>
-            <div class="bounds__v">Work is performed only with written permission and defined scope.</div>
+        <div class="boundary-grid span-12">
+          <div class="boundary-item reveal">
+            <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+            <div class="b-content">
+              <h4>Authorization required</h4>
+              <p>Work is performed only with written permission and defined scope.</p>
+            </div>
           </div>
-          <div class="bounds__row">
-            <div class="bounds__k">No misuse guidance</div>
-            <div class="bounds__v">Findings focus on risk and remediation, not instructions for wrongdoing.</div>
+          <div class="boundary-item reveal">
+            <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg></div>
+            <div class="b-content">
+              <h4>No misuse guidance</h4>
+              <p>Findings focus on risk and remediation, not instructions for wrongdoing.</p>
+            </div>
           </div>
-          <div class="bounds__row">
-            <div class="bounds__k">No guarantees</div>
-            <div class="bounds__v">You get evidence + verification plans—not “perfect safety.”</div>
+          <div class="boundary-item reveal">
+            <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+            <div class="b-content">
+              <h4>No guarantees</h4>
+              <p>You get evidence + verification plans—not “perfect safety.”</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="wrap">
-        <div class="contact" data-glass>
-          <div class="contact__copy">
-            <h2>Scope it.</h2>
-            <p>
-              Tell me what you’re deploying and what you cannot allow to happen.
-              I’ll respond with a tight scope and next steps.
-            </p>
-            <div class="micro">
-              <div class="micro__k">Fastest way to start</div>
-              <div class="micro__v">System boundary + tool permissions + “never events.”</div>
+    <section id="contact" class="section section-dark">
+      <div class="grid-12">
+        <div class="form-container span-12 reveal">
+          <div class="form-copy">
+            <h2 class="huge-text">SCOPE IT.</h2>
+            <p class="lede">Tell me what you’re deploying and what you cannot allow to happen. I’ll respond with a tight scope and next steps.</p>
+            
+            <div class="sys-alert">
+              <span class="alert-icon">⚡︎</span>
+              <div class="alert-text">
+                <div class="alert-k">FASTEST WAY TO START</div>
+                <div class="alert-v">System boundary + tool permissions + “never events.”</div>
+              </div>
             </div>
           </div>
 
-          <form class="form" id="contactForm">
-            <label>
-              <span>Name</span>
-              <input name="name" autocomplete="name" required />
-            </label>
-            <label>
-              <span>Work email</span>
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-            <label>
-              <span>System</span>
-              <input name="system" placeholder="LLM app, agent workflow, RAG, support…" required />
-            </label>
-            <label>
-              <span>Never event</span>
-              <textarea name="never" rows="4" placeholder="Data exposure, unsafe actions, policy failure…" required></textarea>
-            </label>
-            <label class="check">
+          <form class="sys-form" id="contactForm">
+            <div class="input-group">
+              <input type="text" name="name" id="name" required placeholder=" " />
+              <label for="name">ID / Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" name="email" id="email" required placeholder=" " />
+              <label for="email">Work Email</label>
+            </div>
+            <div class="input-group">
+              <input type="text" name="system" id="system" required placeholder=" " />
+              <label for="system">System (LLM app, agent workflow, RAG...)</label>
+            </div>
+            <div class="input-group">
+              <textarea name="never" id="never" rows="4" required placeholder=" "></textarea>
+              <label for="never">Never Event (Data exposure, unsafe actions...)</label>
+            </div>
+            
+            <label class="sys-checkbox">
               <input name="auth" type="checkbox" required />
-              <span>I can provide written authorization and scoped access for testing.</span>
+              <span class="check-box"></span>
+              <span class="check-label">I can provide written authorization and scoped access for testing.</span>
             </label>
 
-            <button class="btn btn--solid" type="submit">Send scope request</button>
-            <p class="fine">Opens your email client. No tracking. No database of leads.</p>
+            <button class="btn-execute" type="submit">
+              <span class="btn-text">TRANSMIT SCOPE REQUEST</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <p class="sys-fineprint">Opens your email client. No tracking. No database of leads.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <footer class="foot">
-      <div class="wrap foot__inner">
-        <div class="foot__left">
-          <div class="brand brand--small">
-            <span class="brand__mark" aria-hidden="true"></span>
-            <span class="brand__text">
-              <span class="brand__name">Veriable</span>
-              <span class="brand__tag">AI Systems Assurance</span>
-            </span>
+    <footer class="sys-footer">
+      <div class="grid-12">
+        <div class="footer-left span-6">
+          <div class="brand">
+            <svg class="brand__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 2L12 22L22 2H16L12 11L8 2H2Z" fill="currentColor"/></svg>
+            <span class="brand__id">VERIABLE<span class="sys-dim">.SYS</span></span>
           </div>
-          <p class="fine">© <span id="year"></span> Veriable. Authorized assessments only.</p>
+          <p class="sys-fineprint">© <span id="year"></span> VERIABLE. AUTHORIZED ASSESSMENTS ONLY. ☠︎</p>
         </div>
-
-        <div class="foot__right">
-          <a href="#capabilities">Capabilities</a>
-          <a href="#deliverables">Deliverables</a>
-          <a href="#contact">Contact</a>
+        <div class="footer-right span-6">
+          <a href="#capabilities">CAPABILITIES</a>
+          <a href="#deliverables">DELIVERABLES</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#top">TO THE TOP ⇧</a>
         </div>
       </div>
     </footer>
-  </main>
-
-  <script src="assets/app.js" defer></script>
-</body>
-</html>
-assets/styles.css
-
-:root{
-  --bg:#07080b;
-  --bg2:#0b0d13;
-  --fg:#eef0f7;
-  --muted:#a8b0c5;
-  --dim:#7b8398;
-  --line:rgba(255,255,255,.10);
-  --glass:rgba(255,255,255,.06);
-  --glass2:rgba(255,255,255,.10);
-  --shadow: 0 26px 90px rgba(0,0,0,.62);
-  --r:22px;
-  --r2:28px;
-  --max:1180px;
-  --pad:22px;
-  --ease:cubic-bezier(.2,.85,.2,1);
-}
-
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  color:var(--fg);
-  background:
-    radial-gradient(1200px 720px at 18% 0%, rgba(115,180,255,.14), transparent 60%),
-    radial-gradient(900px 620px at 88% 10%, rgba(190,120,255,.12), transparent 58%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  overflow-x:hidden;
-}
-
-a{ color:inherit; text-decoration:none; }
-a:hover{ opacity:.92; }
-
-.skip{
-  position:absolute; left:-999px; top:10px;
-  padding:10px 14px; border-radius:12px;
-  background:var(--glass2); border:1px solid var(--line);
-  z-index:9999;
-}
-.skip:focus{ left:10px; }
-
-.wrap{ width:min(var(--max), calc(100% - 2*var(--pad))); margin:0 auto; }
-
-[data-glass]{
-  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-  border:1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:12px 16px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.14);
-  background:transparent;
-  color:var(--fg);
-  font-weight:750;
-  letter-spacing:.2px;
-  transition: transform .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease);
-}
-.btn:active{ transform: translateY(1px); }
-.btn--solid{
-  background: radial-gradient(700px 220px at 20% 10%, rgba(255,255,255,.18), rgba(255,255,255,.06));
-  border-color: rgba(255,255,255,.18);
-}
-.btn--solid:hover{ transform: translateY(-1px); background: radial-gradient(700px 220px at 20% 10%, rgba(255,255,255,.22), rgba(255,255,255,.08)); }
-.btn--ghost:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
-
-.top{
-  position:sticky; top:0; z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.top__inner{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:14px; padding:12px 0;
-}
-.top__cta{ display:none; }
-
-.brand{ display:flex; align-items:center; gap:12px; min-width: 200px; }
-.brand__mark{
-  width:14px; height:14px; border-radius:6px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,0) 55%),
-    linear-gradient(135deg, rgba(120,255,210,.55), rgba(115,180,255,.65), rgba(190,120,255,.55));
-  box-shadow: 0 0 26px rgba(160,200,255,.34);
-}
-.brand__text{ display:flex; flex-direction:column; line-height:1.05; }
-.brand__name{ font-weight:900; letter-spacing:.35px; }
-.brand__tag{ font-size:12px; color:var(--dim); }
-.brand--small .brand__tag{ display:none; }
-
-.nav{
-  display:flex; align-items:center; gap:6px;
-  padding:10px 12px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.22);
-}
-.nav a{
-  color: var(--muted);
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  transition: background .2s var(--ease), color .2s var(--ease);
-}
-.nav a:hover{ background: rgba(255,255,255,.06); color: var(--fg); }
-
-.menu{
-  display:none;
-  width:44px; height:40px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.04);
-  align-items:center; justify-content:center;
-  gap:6px; flex-direction:column;
-}
-.menu span{ width:18px; height:2px; background: rgba(255,255,255,.75); border-radius:999px; }
-
-.hero{ position:relative; padding: 86px 0 54px; }
-.hero__bg{
-  position:absolute; inset:-2px; pointer-events:none;
-  background:
-    radial-gradient(1200px 540px at 18% 0%, rgba(115,180,255,.20), transparent 62%),
-    radial-gradient(900px 520px at 88% 10%, rgba(190,120,255,.17), transparent 62%),
-    radial-gradient(900px 520px at 55% 30%, rgba(120,255,210,.10), transparent 70%);
-  opacity:.85;
-}
-
-.hero__grid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 18px;
-  align-items:start;
-}
-
-.badges{ display:flex; gap:10px; flex-wrap:wrap; }
-.badge{
-  font-size:12px;
-  padding:7px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.06);
-}
-.badge--dim{ color: var(--muted); background: rgba(0,0,0,.22); }
-
-.h1{
-  margin: 18px 0 0;
-  font-size: clamp(44px, 5.1vw, 76px);
-  line-height: 1.01;
-  letter-spacing: -1.1px;
-}
-.h1__accent{
-  display:inline-block;
-  padding: 0 .16em;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  text-shadow: 0 0 28px rgba(160,200,255,.14);
-}
-
-.sub{
-  margin: 14px 0 0;
-  max-width: 65ch;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.85;
-}
-
-.actions{ margin-top: 20px; display:flex; gap:12px; flex-wrap:wrap; }
-
-.line{
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: var(--r2);
-}
-.line__k{
-  font-weight:900;
-  letter-spacing: .22em;
-  font-size: 11px;
-  color: rgba(255,255,255,.60);
-  text-transform: uppercase;
-}
-.line__v{ margin-top: 10px; color: rgba(238,240,247,.86); line-height: 1.75; }
-
-.hero__panel{ padding: 16px; border-radius: var(--r2); }
-.panel__head{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
-.panel__title{ font-weight:900; letter-spacing: -.2px; }
-.pill{
-  font-size: 12px;
-  padding: 7px 10px;
-  border-radius: 999px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.18);
-  color: var(--muted);
-}
-
-.panel__rows{ margin-top: 14px; display:grid; gap: 10px; }
-.row{
-  padding: 12px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.20);
-}
-.row__k{ font-size: 12px; color: var(--dim); }
-.row__v{ margin-top: 6px; font-weight: 800; letter-spacing:.1px; line-height:1.35; }
-
-.panel__foot{
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top:1px solid rgba(255,255,255,.10);
-  display:flex; gap:10px; align-items:flex-start;
-  color: rgba(238,240,247,.72);
-  line-height:1.65;
-}
-.dot{
-  width:9px; height:9px; border-radius:999px; margin-top:6px;
-  background: rgba(120,255,210,.75);
-  box-shadow: 0 0 18px rgba(120,255,210,.20);
-}
-
-.section{ padding: 78px 0; }
-.section--alt{
-  background:
-    radial-gradient(900px 520px at 18% 0%, rgba(255,255,255,.05), transparent 62%),
-    radial-gradient(900px 520px at 88% 20%, rgba(255,255,255,.04), transparent 62%);
-  border-top:1px solid rgba(255,255,255,.06);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.head{
-  display:grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 18px;
-  align-items:end;
-  margin-bottom: 22px;
-}
-.head h2{
-  margin:0;
-  font-size: clamp(28px, 2.6vw, 38px);
-  letter-spacing: -.35px;
-}
-.head p{ margin:0; color: var(--muted); line-height:1.85; }
-
-.cards{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-}
-.card{ padding: 18px; border-radius: var(--r2); }
-.card h3{ margin:0; font-size: 18px; letter-spacing: -.2px; }
-.card p{ margin:10px 0 0; color: var(--muted); line-height:1.85; }
-.card ul{ margin: 14px 0 0; padding-left: 18px; color: rgba(238,240,247,.80); }
-.card li{ margin: 8px 0; color: rgba(238,240,247,.74); }
-
-.steps{
-  margin:0;
-  padding: 8px;
-  list-style:none;
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-.step{
-  display:flex; gap:12px; align-items:flex-start;
-  padding: 14px;
-  border-radius: 18px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(0,0,0,.16);
-}
-.step__n{
-  font-weight:950;
-  letter-spacing:.22em;
-  color: rgba(255,255,255,.55);
-  font-size: 12px;
-  padding-top: 2px;
-}
-.step__t{ font-weight:900; }
-.step__d{ margin-top: 6px; color: var(--muted); line-height:1.75; }
-
-.dl{ padding: 16px; border-radius: var(--r2); display:grid; gap:10px; }
-.dl__item{
-  padding: 14px;
-  border-radius: 18px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(0,0,0,.16);
-}
-.dl__k{ font-weight:900; letter-spacing:-.1px; }
-.dl__v{ margin-top: 6px; color: var(--muted); line-height:1.8; }
-
-.bounds{ padding: 16px; border-radius: var(--r2); }
-.bounds__row{
-  display:grid;
-  grid-template-columns: 220px 1fr;
-  gap: 12px;
-  padding: 14px;
-  border-radius: 18px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(0,0,0,.16);
-}
-.bounds__row + .bounds__row{ margin-top: 10px; }
-.bounds__k{ font-weight:900; }
-.bounds__v{ color: var(--muted); line-height:1.85; }
-
-.contact{
-  padding: 18px;
-  border-radius: var(--r2);
-  display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 14px;
-}
-.contact__copy h2{
-  margin:0;
-  font-size: clamp(28px, 2.7vw, 40px);
-  letter-spacing: -.35px;
-}
-.contact__copy p{ margin: 10px 0 0; color: var(--muted); line-height:1.9; }
-.micro{
-  margin-top: 14px;
-  padding: 12px;
-  border-radius: 18px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.18);
-}
-.micro__k{ font-size: 12px; color: var(--dim); }
-.micro__v{ margin-top: 8px; font-weight: 850; }
-
-.form label{ display:block; margin-bottom: 12px; }
-.form span{ display:block; font-size: 12px; color: var(--muted); margin: 0 0 6px 2px; }
-input, textarea{
-  width:100%;
-  padding: 12px;
-  border-radius: 16px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.22);
-  color: var(--fg);
-  outline:none;
-  transition: border-color .2s var(--ease), background .2s var(--ease);
-}
-input:focus, textarea:focus{
-  border-color: rgba(120,255,210,.35);
-  background: rgba(0,0,0,.28);
-}
-.check{ display:flex; gap:10px; align-items:flex-start; }
-.check input{ width:18px; height:18px; margin-top:3px; }
-.form .btn{ width:100%; }
-
-.fine{ margin: 10px 0 0; color: rgba(255,255,255,.46); line-height:1.6; font-size: 12px; }
-
-.foot{ padding: 34px 0; }
-.foot__inner{
-  display:flex; justify-content:space-between; align-items:flex-start;
-  gap: 14px;
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top: 18px;
-}
-.foot__right{ display:flex; gap: 14px; color: var(--muted); font-size: 13px; }
-.foot__right a:hover{ color: var(--fg); }
-
-@media (max-width: 980px){
-  .hero__grid{ grid-template-columns: 1fr; }
-  .head{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-  .steps{ grid-template-columns: 1fr; }
-  .contact{ grid-template-columns: 1fr; }
-  .bounds__row{ grid-template-columns: 1fr; }
-
-  .top__cta{ display:inline-flex; }
-  .nav{
-    display:none;
-    position:absolute;
-    top:64px; left: var(--pad); right: var(--pad);
-    flex-direction:column;
-    border-radius: 20px;
-    padding: 12px;
-  }
-  .nav.is-open{ display:flex; }
-  .menu{ display:flex; }
-}
-assets/app.js
-
-(() => {
-  // Year
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-  // Mobile menu
-  const btn = document.querySelector(".menu");
-  const nav = document.getElementById("nav");
-  if (btn && nav) {
-    btn.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    nav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  // Contact form -> mailto (replace inbox)
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-
-      const name = String(fd.get("name") || "").trim();
-      const email = String(fd.get("email") || "").trim();
-      const system = String(fd.get("system") || "").trim();
-      const never = String(fd.get("never") || "").trim();
-
-      const subject = encodeURIComponent("AI Systems Assurance — Scope Request");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nSystem:\n${system}\n\nNever event:\n${never}\n\nAuthorization:\nI can provide written authorization and scoped access.\n`
-      );
-
-      const to = "you@yourdomain.com"; // <-- change this
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    });
-  }
-})();
-assets/favicon.svg
-
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#78ffd2" stop-opacity=".95"/>
-      <stop offset=".55" stop-color="#73b4ff" stop-opacity=".95"/>
-      <stop offset="1" stop-color="#be78ff" stop-opacity=".95"/>
-    </linearGradient>
-    <radialGradient id="r" cx=".3" cy=".3" r=".9">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/>
-      <stop offset=".6" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="url(#g)"/>
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="url(#r)"/>
-</svg>
-If this still looks “awful,” send one screenshot of the live page (or the URL). Then I’ll fix the actual problem in one move—either the design decisions or the common killer: CSS not loading / wrong base path / wrong folder published.
-
-Show more
-9:14 PM
-
-Verified frontend skill, then prepared comprehensive website files
-Verified frontend skill, then prepared comprehensive website files
-The user wants me to create these files for a Veriable AI Systems Assurance website. Let me check the frontend-design skill first, then create all the files.
-
-
-Reading frontend design skill
-Now let me create all the files. I'll create the directory structure and files.
-
-
-Create directory structure
-
-Script
-
-Creating index.html
-index.html
-
-Creating styles.css
-styles.css
-
-Creating app.js
-app.js
-
-Creating favicon.svg
-favicon.svg
-
-Copy to outputs
-
-Script
-
-Presented 4 files
-Done
-All four files are ready — exact tree:
-
-veriable/
-├── index.html
-└── assets/
-    ├── styles.css
-    ├── app.js
-    └── favicon.svg
-Two things to do before deploying:
-
-1. Swap your email — in app.js, find you@yourdomain.com and replace it with your actual address.
-
-2. Verify your deploy root — the folder you publish must be veriable/ itself (not its parent). Your host should serve index.html at / and assets/styles.css at /assets/styles.css. If CSS still doesn't load, check the browser's Network tab — a 404 on styles.css means the folder root is wrong, not the code.
-
-Index
-Code · HTML 
-Styles
-Code · CSS 
-App
-JS 
-Favicon
-Image · SVG 
-You are a literal awwwards winning designer - most respected in the world. completely fix all of the slop in this project
-
-9:19 PM
-
-Architected comprehensive design system overhaul with typography and color strategy
-Architected comprehensive design system overhaul with typography and color strategy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Complete ground-up rebuild. New fonts, new color language, editorial typography, purposeful motion — zero template energy.
-
-
-Created 5 files, ran 2 commands, read a file
-Created 5 files, ran 2 commands, read a file
-Here's what changed, and why every decision was intentional:
-
-Typography — Replaced generic system fonts with Syne (geometric, confident, distinct in the AI space) paired with Instrument Serif italic for the headline accent. That serif/sans contrast in Verify AI systems *before they fail.* is the single most memorable thing on the page. JetBrains Mono handles all labels and numbers — technical credibility without trying too hard.
-
-Color — Killed the blue-purple gradient soup (every AI site does this). Single accent: acid lime 
-#b8ff3c. Used on exactly four things: the brand mark, the live dot, the CTA button, and section labels. Everything else is near-black and calibrated grey. The restraint is what makes it land.
-
-Texture — Noise grain overlay at 2.8% opacity. Invisible individually, but pulls the whole surface together into something that feels physical rather than flat.
-
-Layout surgery — Capabilities and Boundaries now use a borderless grid (gap: 1px on a border-colored background — clean rule lines without boxing everything). Process uses large mono numbers as decorative anchors. Deliverables became a proper table with tag chips. The hero panel is a data terminal, not a glass card.
-
-Motion — Scroll-reveal with staggered delays. Nav blurs and compresses on scroll. Ticker strip for the operating standard (was a static box, now it breathes). No entrance animations that fight the user.
-
-One action item: Open assets/app.js and replace you@yourdomain.com with your real address.
-
-Index
-Code · HTML 
-Styles
-Code · CSS 
-App
-JS 
-Favicon
-Image · SVG 
-
-
-Want to be notified when Claude responds?
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-Index · HTML
-Copy
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Authorized AI assurance: semantic and logical adversarial evaluation with evidence-linked findings and verification criteria. No false guarantees." />
-  <meta name="theme-color" content="#07080d" />
-  <title>Veriable — AI Systems Assurance</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="assets/styles.css" />
-</head>
-
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <!-- ── NAV ─────────────────────────────────────────────── -->
-  <header class="nav-wrap" id="nav-wrap">
-    <div class="nav-logo">
-      <div class="nav-mark" aria-hidden="true"></div>
-      <div>
-        <span class="nav-wordmark">Veriable<span class="nav-sub">AI Assurance</span></span>
-      </div>
-    </div>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#capabilities">Capabilities</a>
-      <a href="#process">Process</a>
-      <a href="#deliverables">Deliverables</a>
-      <a href="#boundaries">Boundaries</a>
-    </nav>
-
-    <div class="nav-right">
-      <a class="btn btn--ghost" href="#contact">Scope it</a>
-      <a class="btn btn--primary" href="#contact">Request assessment</a>
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="menu-btn">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- mobile nav -->
-  <div class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <button class="mobile-nav-close" id="menu-close" aria-label="Close menu">✕</button>
-    <a href="#capabilities">Capabilities</a>
-    <a href="#process">Process</a>
-    <a href="#deliverables">Deliverables</a>
-    <a href="#boundaries">Boundaries</a>
-    <a class="btn btn--primary" href="#contact">Request assessment</a>
-  </div>
-
-  <main id="main">
-
-    <!-- ── HERO ───────────────────────────────────────────── -->
-    <section class="hero" id="top" aria-label="Hero">
-      <div class="hero-glow-a" aria-hidden="true"></div>
-      <div class="hero-glow-b" aria-hidden="true"></div>
-
-      <div class="hero__inner">
-        <div class="wrap hero__grid">
-
-          <div class="hero__copy">
-            <div class="hero__eyebrow">
-              <span class="hero__dot" aria-hidden="true"></span>
-              <span class="hero__eyebrow-text">Authorized only — no false guarantees</span>
-            </div>
-
-            <h1 class="hero__h1">
-              Verify AI<br>
-              systems<br>
-              <em>before they<br>fail.</em>
-            </h1>
-
-            <p class="hero__sub">
-              I test AI behavior at the semantic and logical level—where "built-in safety" 
-              often collapses under real prompts, real tools, and real workflows. You get 
-              evidence, prioritized mitigations, and verification criteria you can audit.
-            </p>
-
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#contact">Request a scoped assessment</a>
-              <a class="btn btn--ghost" href="#deliverables">See deliverables</a>
-            </div>
-          </div>
-
-          <aside class="hero__panel" aria-label="Engagement snapshot">
-            <div class="hero__panel-head">
-              <span class="hero__panel-label">Engagement snapshot</span>
-              <span class="hero__panel-live">Evidence-linked</span>
-            </div>
-            <div class="hero__panel-row">
-              <div class="hero__panel-k">Focus</div>
-              <div class="hero__panel-v">High-risk failure modes</div>
-            </div>
-            <div class="hero__panel-row">
-              <div class="hero__panel-k">Surfaces</div>
-              <div class="hero__panel-v">Prompts · Tools/Agents · RAG · Policies</div>
-            </div>
-            <div class="hero__panel-row">
-              <div class="hero__panel-k">Outputs</div>
-              <div class="hero__panel-v">Risk register · Mitigation backlog · Verification criteria</div>
-            </div>
-            <div class="hero__panel-row">
-              <div class="hero__panel-k">Rule</div>
-              <div class="hero__panel-v">No unauthorized testing. No misuse guidance.</div>
-            </div>
-            <div class="hero__panel-foot">
-              Designed for teams who can't afford fragile AI.
-            </div>
-          </aside>
-
-        </div>
-
-        <div class="ticker-wrap" aria-hidden="true">
-          <div class="ticker">
-            <!-- set 1 -->
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              <strong>Operating standard</strong>
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Verifiable, not vulnerable
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Functional, not fragile
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Reliable + resilient
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Not reactive and reckless
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Responsible disclosure
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Evidence-linked findings
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Authorized scopes only
-            </div>
-            <!-- set 2 (duplicate for seamless loop) -->
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              <strong>Operating standard</strong>
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Verifiable, not vulnerable
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Functional, not fragile
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Reliable + resilient
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Not reactive and reckless
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Responsible disclosure
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Evidence-linked findings
-            </div>
-            <div class="ticker-item">
-              <span class="ticker-sep"></span>
-              Authorized scopes only
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CAPABILITIES ───────────────────────────────────── -->
-    <section id="capabilities" class="section">
-      <div class="wrap">
-        <div class="cap-head" data-reveal>
-          <div>
-            <div class="section__label">Capabilities</div>
-            <h2 class="section__h">Pressure testing<br><em>plus proof.</em></h2>
-          </div>
-          <p class="section__lead">
-            Not "AI safety consulting." You're buying rigorous adversarial evaluation 
-            where every finding maps directly to a deliverable you can inspect and act on.
-          </p>
-        </div>
-
-        <div class="cap-grid">
-          <article class="cap-item" data-reveal data-delay="1">
-            <span class="cap-num">01</span>
-            <h3 class="cap-title">Authorized adversarial evaluation</h3>
-            <p class="cap-desc">
-              Stress testing behavior under ambiguity, hierarchy conflict, and policy collision. 
-              Real prompts, real failure modes.
-            </p>
-            <ul class="cap-list">
-              <li>Instruction and role confusion mapping</li>
-              <li>Misuse-case modeling for real workflows</li>
-              <li>Boundary enforcement validation</li>
-            </ul>
-          </article>
-
-          <article class="cap-item" data-reveal data-delay="2">
-            <span class="cap-num">02</span>
-            <h3 class="cap-title">Tool & agent boundary review</h3>
-            <p class="cap-desc">
-              Language-to-action means permissions, validation, and blast-radius control 
-              all need scrutiny before deployment.
-            </p>
-            <ul class="cap-list">
-              <li>Least-privilege permissioning review</li>
-              <li>Unsafe action path discovery</li>
-              <li>Safe degradation behavior design</li>
-            </ul>
-          </article>
-
-          <article class="cap-item" data-reveal data-delay="3">
-            <span class="cap-num">03</span>
-            <h3 class="cap-title">Retrieval trust (RAG)</h3>
-            <p class="cap-desc">
-              Retrieval can inject wrong context or silently cross data boundaries. 
-              I test the trust logic, not just the results.
-            </p>
-            <ul class="cap-list">
-              <li>Isolation and provenance checks</li>
-              <li>Relevance failure conditions</li>
-              <li>Reliability constraints & mitigations</li>
-            </ul>
-          </article>
-
-          <article class="cap-item" data-reveal data-delay="4">
-            <span class="cap-num">04</span>
-            <h3 class="cap-title">Verification criteria</h3>
-            <p class="cap-desc">
-              So fixes stay fixed across model updates, prompt edits, and the next time 
-              you add a new tool.
-            </p>
-            <ul class="cap-list">
-              <li>"Never event" acceptance criteria</li>
-              <li>Regression scenario set</li>
-              <li>Monitoring signals & incident posture</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PROCESS ─────────────────────────────────────────── -->
-    <section id="process" class="section">
-      <div class="wrap">
-        <div class="process-head" data-reveal>
-          <div>
-            <div class="section__label">Process</div>
-            <h2 class="section__h">Discovery to<br><em>verification.</em></h2>
-          </div>
-          <p class="section__lead">
-            A clean, repeatable path from scoping "never events" through mitigation 
-            design to the verification plan your team can actually run.
-          </p>
-        </div>
-
-        <ol class="process-steps" data-reveal data-delay="1">
-          <li class="process-step">
-            <span class="process-n">01</span>
-            <div class="process-title">Scope & never events</div>
-            <p class="process-desc">
-              Define boundaries, permissions, data sources, and the outcomes you cannot tolerate.
-            </p>
-          </li>
-          <li class="process-step">
-            <span class="process-n">02</span>
-            <div class="process-title">Semantic + logical probing</div>
-            <p class="process-desc">
-              Stress instruction hierarchies, tool paths, retrieval quirks, and policy enforcement.
-            </p>
-          </li>
-          <li class="process-step">
-            <span class="process-n">03</span>
-            <div class="process-title">Mitigation design</div>
-            <p class="process-desc">
-              Prioritize controls that reduce blast radius and increase verifiability for your stack.
-            </p>
-          </li>
-          <li class="process-step">
-            <span class="process-n">04</span>
-            <div class="process-title">Verification plan</div>
-            <p class="process-desc">
-              Acceptance criteria plus regression scenarios for the behaviors that matter most.
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ── DELIVERABLES ───────────────────────────────────── -->
-    <section id="deliverables" class="section">
-      <div class="wrap">
-        <div class="dl-head" data-reveal>
-          <div>
-            <div class="section__label">Deliverables</div>
-            <h2 class="section__h">No vibes.<br><em>Just files.</em></h2>
-          </div>
-          <p class="section__lead">
-            Artifacts you can hand directly to engineering and leadership.
-            Every finding evidence-linked, every recommendation actionable.
-          </p>
-        </div>
-
-        <div class="dl-table" data-reveal data-delay="1">
-          <div class="dl-row">
-            <div class="dl-title">Risk register</div>
-            <div class="dl-desc">Reproduction guidance, impacted surfaces, severity rationale, and mitigation options — all evidence-linked.</div>
-            <div class="dl-tag">Evidence-linked</div>
-          </div>
-          <div class="dl-row">
-            <div class="dl-title">Mitigation backlog</div>
-            <div class="dl-desc">Ordered by business impact and feasibility: boundaries, validation, permissions, workflow constraints.</div>
-            <div class="dl-tag">Prioritized</div>
-          </div>
-          <div class="dl-row">
-            <div class="dl-title">Verification criteria</div>
-            <div class="dl-desc">Acceptance criteria and regression scenarios for critical behaviors — your "never event" test suite.</div>
-            <div class="dl-tag">Auditable</div>
-          </div>
-          <div class="dl-row">
-            <div class="dl-title">Executive brief</div>
-            <div class="dl-desc">Clear summary of risks, priorities, decisions needed, and what materially changes after mitigation.</div>
-            <div class="dl-tag">Leadership</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── BOUNDARIES ─────────────────────────────────────── -->
-    <section id="boundaries" class="section">
-      <div class="wrap">
-        <div class="bounds-head" data-reveal>
-          <div>
-            <div class="section__label">Boundaries</div>
-            <h2 class="section__h">Ethical.<br><em>Professional.</em></h2>
-          </div>
-          <p class="section__lead">
-            The constraints that keep this work trustworthy. Not boilerplate — 
-            these are the operating principles that make the findings credible.
-          </p>
-        </div>
-
-        <div class="bounds-grid">
-          <div class="bounds-item" data-reveal data-delay="1">
-            <div class="bounds-icon" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 1.5L2 4v4c0 3.314 2.686 6 6 6s6-2.686 6-6V4L8 1.5z" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="bounds-title">Authorization required</h3>
-            <p class="bounds-desc">
-              Work is performed only with written permission and a defined scope. 
-              No exceptions. No ambiguous arrangements.
-            </p>
-          </div>
-
-          <div class="bounds-item" data-reveal data-delay="2">
-            <div class="bounds-icon" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="6.5"/>
-                <path d="M8 5v4M8 11v.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="bounds-title">No misuse guidance</h3>
-            <p class="bounds-desc">
-              Findings focus on risk characterization and remediation — not on 
-              instructions for exploiting what we find.
-            </p>
-          </div>
-
-          <div class="bounds-item" data-reveal data-delay="3">
-            <div class="bounds-icon" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 8l3.5 3.5L13 4.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="bounds-title">No guarantees</h3>
-            <p class="bounds-desc">
-              You get evidence-linked findings and a verification plan — not a claim 
-              of "perfect safety." That claim doesn't exist.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACT ─────────────────────────────────────────── -->
-    <section id="contact" class="section">
-      <div class="wrap">
-        <div class="contact-inner">
-
-          <div class="contact-copy" data-reveal>
-            <h2>Scope<br><em>it.</em></h2>
-            <p>
-              Tell me what you're deploying and what you cannot allow to happen.
-              I'll respond with a tight scope and next steps — no sales call required.
-            </p>
-            <div class="contact-hint">
-              <div class="contact-hint-k">Fastest way to start</div>
-              <div class="contact-hint-v">System boundary + tool permissions + "never events."</div>
-            </div>
-          </div>
-
-          <form class="form" id="contactForm" data-reveal data-delay="1">
-            <div class="form-field">
-              <label class="form-label" for="f-name">Name</label>
-              <input class="form-input" id="f-name" name="name" autocomplete="name" required placeholder="Your name" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-email">Work email</label>
-              <input class="form-input" id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-system">System</label>
-              <input class="form-input" id="f-system" name="system" required placeholder="LLM app, agent workflow, RAG pipeline, support bot…" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-never">Never event</label>
-              <textarea class="form-input" id="f-never" name="never" rows="4" required placeholder="Data exposure, unsafe actions, policy failure, PII leakage…"></textarea>
-            </div>
-
-            <label class="form-check">
-              <input name="auth" type="checkbox" required />
-              <span>I can provide written authorization and scoped access for testing.</span>
-            </label>
-
-            <button class="btn btn--primary" type="submit">Send scope request →</button>
-            <p class="form-fine">Opens your email client · No tracking · No lead database</p>
-          </form>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── FOOTER ─────────────────────────────────────────── -->
-    <footer class="footer">
-      <div class="wrap footer__inner">
-        <div class="footer__logo">
-          <div class="nav-mark" style="width:22px;height:22px;border-radius:6px;" aria-hidden="true"></div>
-          <div>
-            <div class="nav-wordmark" style="font-size:13px;">Veriable</div>
-            <div class="footer__copy">© <span id="year"></span> Veriable · Authorized assessments only</div>
-          </div>
-        </div>
-        <nav class="footer__links" aria-label="Footer">
-          <a href="#capabilities">Capabilities</a>
-          <a href="#deliverables">Deliverables</a>
-          <a href="#boundaries">Boundaries</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </footer>
-
   </main>
 
   <script src="assets/app.js" defer></script>
