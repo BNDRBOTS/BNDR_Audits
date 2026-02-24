@@ -1,90 +1,89 @@
+/* assets/app.js */
 (() => {
   'use strict';
 
-  // ── year ─────────────────────────────────────────────────
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // Strict execution env. No console logs. No flash. 
+  // Code like a ghost.
+  
+  // 01. Time / Meta Update
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // ── nav scroll state ──────────────────────────────────────
-  const navWrap = document.getElementById('nav-wrap');
-  const onScroll = () => {
-    navWrap?.classList.toggle('scrolled', window.scrollY > 40);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  // ── mobile menu ───────────────────────────────────────────
-  const menuBtn   = document.getElementById('menu-btn');
-  const menuClose = document.getElementById('menu-close');
-  const mobileNav = document.getElementById('mobile-nav');
-
-  const openMenu = () => {
-    mobileNav?.classList.add('is-open');
-    menuBtn?.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeMenu = () => {
-    mobileNav?.classList.remove('is-open');
-    menuBtn?.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  };
-
-  menuBtn?.addEventListener('click', openMenu);
-  menuClose?.addEventListener('click', closeMenu);
-  mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-  // close on ESC
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-
-  // ── scroll reveal ─────────────────────────────────────────
-  const revealEls = document.querySelectorAll('[data-reveal]');
-  if (revealEls.length) {
-    const io = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -48px 0px' }
-    );
-    revealEls.forEach(el => io.observe(el));
-  }
-
-  // ── contact form → mailto ─────────────────────────────────
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', e => {
+  // 02. Smooth Scroll - Engineered Silence
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      const fd = new FormData(form);
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Brutalist snap / high-tension ease approach
+        window.scrollTo({
+          top: targetElement.offsetTop - 72, 
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 
-      const name   = String(fd.get('name')   || '').trim();
-      const email  = String(fd.get('email')  || '').trim();
-      const system = String(fd.get('system') || '').trim();
-      const never  = String(fd.get('never')  || '').trim();
+  // 03. Interaction Observer - Reveal Logic
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0
+  };
 
-      const subject = encodeURIComponent('AI Systems Assurance — Scope Request');
-      const body = encodeURIComponent(
-        [
-          `Name: ${name}`,
-          `Email: ${email}`,
-          '',
-          `System:`,
-          system,
-          '',
-          `Never event:`,
-          never,
-          '',
-          `Authorization:`,
-          `I can provide written authorization and scoped access for testing.`,
-        ].join('\n')
-      );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-      const to = 'you@yourdomain.com'; // ← replace with your address
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Trigger immediate reveal for above-the-fold content
+  setTimeout(() => {
+    document.querySelectorAll('#top .reveal').forEach(el => {
+      el.classList.add('is-visible');
+    });
+  }, 100);
+
+  // 04. Data Transmission (Mailto fallback)
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const btn = form.querySelector('.btn-execute');
+      const originalText = btn.innerHTML;
+      
+      // UX Feedback
+      btn.innerHTML = `<span class="btn-text">TRANSMITTING...</span>`;
+      
+      setTimeout(() => {
+        const fd = new FormData(form);
+
+        const name = String(fd.get("name") || "").trim();
+        const email = String(fd.get("email") || "").trim();
+        const system = String(fd.get("system") || "").trim();
+        const never = String(fd.get("never") || "").trim();
+
+        const subject = encodeURIComponent(`SYS_REQ: AI Systems Assurance Scope [${name}]`);
+        const body = encodeURIComponent(
+          `// SCOPE REQUEST TRANSMISSION\n// ID: ${name}\n// COMMS: ${email}\n\n[SYSTEM TARGET]\n${system}\n\n[NEVER EVENT PARAMETERS]\n${never}\n\n[AUTH]\n> I can provide written authorization and scoped access.\n\n`
+        );
+
+        const to = "admin@veriable.com"; // Change target
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        
+        btn.innerHTML = originalText;
+      }, 600);
     });
   }
-
 })();
